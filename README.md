@@ -56,18 +56,18 @@ Second array tests if after a new item is added to the array [1], the length of 
 **Add a test for the `pop()` method.**
 ``` 
     describe('#pop()', function() {
-    it('should remove the last item from the list', function() {
-      var array = [1, 2, 3, 4]
-      array.pop()
-      expect(array).to.deep.equal([1, 2, 3])
-    })
+      it('should remove the last item from the list', function() {
+        var array = [1, 2, 3, 4]
+        array.pop()
+        expect(array).to.deep.equal([1, 2, 3])
+      })
 
-    it('should alter the length properly', function() {
-      var array = [1, 2,3,4]
-      array.pop()
-      expect(array.length).to.equal(3)
+      it('should alter the length properly', function() {
+        var array = [1, 2,3,4]
+        array.pop()
+        expect(array.length).to.equal(3)
+      })
     })
-  })
 ```
 
 > 💡 **REMINDER**: Do you need to commit your answers to the questions above?
