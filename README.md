@@ -54,7 +54,8 @@ In the code, it adds 5 to the end of the array. The first array tests, compares 
 Second array tests if after a new item is added to the array [1], the length of the array should increase from 4 to 5.
 
 **Add a test for the `pop()` method.**
-``` describe('#pop()', function() {
+``` 
+    describe('#pop()', function() {
     it('should remove the last item from the list', function() {
       var array = [1, 2, 3, 4]
       array.pop()
