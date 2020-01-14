@@ -79,15 +79,63 @@ Until now, we've been testing JavaScript's in-built functionality, which is kind
 Read The coolculator class and tests.
 
 **What methods does the Cooclulator currently implement?**
+add function for 2 numbers
 
 **Describe how the existing test works**
-
+The test uses the add function to calculate the result of the numbers 2 & 3. Mathematically, we know that 2+3 = 5, so we compare the result of the function to reality of the result being 5.
 
 **Change a value in the `add()` test so it fails.**
-Once you've seen it fail, revert your change so it's green again.
+```javascript
+it('should add', function() {
+    result = mm.add(2, 3)
+    expect(result).to.equal(6)
+  })
+```
+
+which results in
+
+```shell
+  Array
+    #push()
+      ✓ should add an item to the array
+      ✓ should alter the length properly
+    #pop()
+      ✓ should remove the last item from the list
+      ✓ should alter the length properly
+
+  Coolculator
+    1) should add
+
+
+  4 passing (6ms)
+  1 failing
+
+  1) Coolculator
+       should add:
+
+      AssertionError: expected 5 to equal 6
+      + expected - actual
+
+      -5
+      +6
+      
+      at Context.<anonymous> (test/coolculator.test.js:11:23)
+      at processImmediate (internal/timers.js:445:21)
+
+
+
+npm ERR! Test failed.  See above for more details.
+```
 
 **Changethe implementation of `add()` so it always returns `1000`.**
-Once you've seen it fail, revert your change so it's green again.
+In the add function, I have changed the 'return a+b' to 'return 1000'
+```javascript
+class Coolculator {
+  add(a, b) {
+    return 1000
+  }
+}
+```
 
 Now let's do some TDD! Uncomment the `multiply()` test.
 
