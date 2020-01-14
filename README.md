@@ -229,7 +229,75 @@ Add some more methods to the Coolculator class using the Red/Green/Refactor proc
 | factorial     | Takes a single number and calculates its factorial (this is kinda hard)                                                                                       |
 | random        | Takes an integer and returns a random integer between 0 and it. How might we test this? (This requires some _thinking!_, and we'll never have a perfect test) |
 
-> 💡 **REMINDER**: Do you need to commit your new code?
+```javascript
+class Coolculator {
+  add(a, b) {
+    return (a+b);
+  }
+  multiply(a,b){
+    return (a*b);
+  }
+  subtract(a,b){
+    return (a-b);
+  }
+  divide(a,b){
+    return(a/b)
+  }
+  highest(a,b){
+    return a>b?a:b
+  }
+  lowest(a,b){
+    return b>a?a:b
+  }
+  double(a){
+    return a*2
+  }
+  square(a){
+    return a**2
+  }
+  raise(a,b){
+    return a**b
+  }
+  isNegative(a){
+    return 0>a?true:false
+  }
+  isPositive(a){
+    return a>0? true:false
+  }
+  isCool(a){
+    num =toString(a);
+    len = length(num) - 1;
+    return num[0] == num[len]?true:false
+  }
+  sumof(a1){
+    return a1.reduce(function(a,b){
+      return (a+b)
+    }, 0)
+  }
+  multipleArray(a1){
+    return a1.reduce(function(a,b){
+      return(a*b)
+    }, 0)
+  }
+  mean(a1){
+    return a1.reduce(function(a,b){
+      return (a+b)
+    }, 0)/a1.length
+  }
+  factorial(a){
+    multiple = 1
+    for (i=a; i>0;i--){
+      multiple= multiple*a
+    }
+    return multiple;
+  }
+  random(a){
+    return Math.floor(Math.random() * a);
+  }
+}
+
+module.exports = Coolculator
+```
 
 ## Part 4 (extension): More Array Tests
 
