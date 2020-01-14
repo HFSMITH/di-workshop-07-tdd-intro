@@ -50,9 +50,24 @@ Once you understand what's going on, **ANSWER THE QUESTION IN THIS README FILE**
 Look in [`array.test.js`](test/array.test.js). This contains some tests for JavaScript's built-in Array methods.
 
 **What do the existing tests actually test (explain in english)?**
+In the code, it adds 5 to the end of the array. The first array tests, compares the ideal list with the 5 on the end, with the list where the code adds 5 to the end - checking if they are the same.
+Second array tests if after a new item is added to the array [1], the length of the array should increase from 4 to 5.
 
 **Add a test for the `pop()` method.**
-Hint: You'll need _two_ assertions to fully test that it `pop()` works. Explain why you chose these assersions here.
+``` describe('#pop()', function() {
+    it('should remove the last item from the list', function() {
+      var array = [1, 2, 3, 4]
+      array.pop()
+      expect(array).to.deep.equal([1, 2, 3])
+    })
+
+    it('should alter the length properly', function() {
+      var array = [1, 2,3,4]
+      array.pop()
+      expect(array.length).to.equal(3)
+    })
+  })
+```
 
 > 💡 **REMINDER**: Do you need to commit your answers to the questions above?
 
@@ -65,6 +80,7 @@ Read The coolculator class and tests.
 **What methods does the Cooclulator currently implement?**
 
 **Describe how the existing test works**
+
 
 **Change a value in the `add()` test so it fails.**
 Once you've seen it fail, revert your change so it's green again.
