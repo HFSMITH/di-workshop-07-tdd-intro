@@ -140,15 +140,73 @@ class Coolculator {
 Now let's do some TDD! Uncomment the `multiply()` test.
 
 **What do you expect to happen when you run your tests?**
+Its going to fail, as we have not created a multiply() method within the coolculator class.
 
 **What actually happened when you ran your tests?**
+it failed.
 
 **Add a method to the Coolculator so the test passes green**
+To this class, we have added the multiply method() that will allow for the calculation to occur.
+```javascript
+multiply(a,b){
+    return a*b;
+  }
+```
+This passess the tests in the shell.
+```shell
+> ada-coolculator@1.0.0 test /Users/harryfitzgeraldsmith/di-workshop-07-tdd-intro
+> mocha
+
+
+
+  Array
+    #push()
+      ✓ should add an item to the array
+      ✓ should alter the length properly
+    #pop()
+      ✓ should remove the last item from the list
+      ✓ should alter the length properly
+
+  Coolculator
+    ✓ should add
+    ✓ should multiply
+
+
+  6 passing (5ms)
+
+UK-C02ZT1WELVDL:di-workshop-07-tdd-intro harryfitzgeraldsmith$ 
+```
 
 **Uncomment the `subtract()` test and write some code to make it green**
-Remember the process: Red / Green / Refactor - is there any refactoring you could do to clean up your code?
+Created the subtract function
+```javascript
+  subtract(a,b){
+    return (a-b);
+  }
+```
+Which results in
+```shell
+> ada-coolculator@1.0.0 test /Users/harryfitzgeraldsmith/di-workshop-07-tdd-intro
+> mocha
 
-> 💡 **REMINDER**: Do you need to commit your answers to the questions above?
+
+
+  Array
+    #push()
+      ✓ should add an item to the array
+      ✓ should alter the length properly
+    #pop()
+      ✓ should remove the last item from the list
+      ✓ should alter the length properly
+
+  Coolculator
+    ✓ should add
+    ✓ should multiply
+    ✓ should subtract
+
+
+  7 passing (6ms)
+```
 
 ## Part 3: Extending the Coolculator
 
